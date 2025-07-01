@@ -2,22 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
+@utility container{
+  max-width: 1200px;
+  width : 90% ;
+  margin : auto;
+}
+
 @theme {
   --font-aldrich: "Aldrich", sans-serif;
   --font-poppins: "Poppins", sans-serif;
-  --gradient: linear-gradient(to right, #FFC97D, #FFFFFF);
-  --hover-gradient : linear-gradient(to right, #FFC97D1A, #FFFFFF1A);
-}
-
-.button-gradient-text {
-  background-image: var(--gradient);
-  background-clip: text;
-  overflow: hidden;
-  color: transparent;
-  &:hover{
-    color: black;
-    transition: all ease-in-out 400;
-  }
+  --gradient: linear-gradient(to right, #ffc97d, #ffffff);
+  --hover-gradient: linear-gradient(to right, #ffc97d1a, #ffffff1a);
 }
 
 .gradient-text {
@@ -27,10 +22,27 @@
   color: transparent;
 }
 
-.gradient{
+.OutlineButton-gradient {
+  background-image: var(--gradient);
+  background-clip: text;
+  overflow: hidden;
+  color: transparent;
+  border-image: var(--gradient);
+  border-image-slice: 1;
+  display: inline-block;
+  &:hover {
+    color: black;
+    background-clip: border-box;
+  }
+}
+
+.gradient-backgroung {
   background: var(--gradient);
 }
-.hover-gradient{
-  background: var(--hover-gradient);
 
+.gradient-border {
+  border: 1px solid transparent;
+  border-image: var(--gradient);
+  border-image-slice: 1;
+  display: inline-block;
 }

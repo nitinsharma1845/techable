@@ -5,7 +5,7 @@
 @utility container{
   max-width: 1200px;
   width : 90% ;
-  margin : auto;
+  margin : 0 auto;
 }
 
 @theme {
@@ -15,7 +15,7 @@
   --hover-gradient: linear-gradient(to right, #ffc97d1a, #ffffff1a);
 }
 
-.gradient-text {
+@utility gradient-text {
   background-image: var(--gradient);
   background-clip: text;
   overflow: hidden;
@@ -40,7 +40,7 @@
   background: var(--gradient);
 }
 
-.gradient-border {
+@utility gradient-border {
   border: 1px solid transparent;
   border-image: var(--gradient);
   border-image-slice: 1;
